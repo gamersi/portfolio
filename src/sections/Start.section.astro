@@ -1,0 +1,147 @@
+---
+type Skill = {
+    name: string;
+    icon: string;
+    link: string;
+}
+interface Props {
+    skills: skill[]
+}
+
+const { skills = [
+        {
+            name: "HTML",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+            link: "https://developer.mozilla.org/en-US/docs/Web/HTML"
+        },
+        {
+            name: "CSS",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+            link: "https://developer.mozilla.org/en-US/docs/Web/CSS"
+        },
+        {
+            name: "JavaScript",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+            link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+        },
+        {
+            name: "TypeScript",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+            link: "https://www.typescriptlang.org/"
+        },
+        {
+            name: "React",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+            link: "https://reactjs.org/"
+        },
+        {
+            name: "Node.js",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+            link: "https://nodejs.org/en/"
+        },
+        {
+            name: "MongoDB",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+            link: "https://www.mongodb.com/"
+        },
+        {
+            name: "Git",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+            link: "https://git-scm.com/"
+        },
+        {
+            name: "GitHub",
+            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+            link: "https://github.com"
+        }
+    ] } = Astro.props;
+---
+
+<section class="start" id="start">
+    <div class="left-col">
+        <h1>Hey, my name is <span class="text-gradient">Simon</span></h1>
+        <h2>I'm a <span class="text-gradient">developer</span> from <span class="text-gradient">Villach, Austria</span></h2>
+    </div>
+    <div class="right-col">
+        <ul class="skills">
+            {skills.map((skill: Skill) => (
+                <li>
+                    <a href={skill.link} target="_blank" rel="noopener noreferrer">
+                        <img src={skill.icon} title={skill.name} alt={skill.name} />
+                        <p>{skill.name}</p>
+                    </a>
+                </li>
+            ))}
+    </div>
+</section>
+<style>
+    .text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .start {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10%;
+        height: 100vh;
+    }
+    .start .left-col {
+        width: 50%;
+    }
+    .start .right-col {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .start .right-col .skills {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .start .right-col .skills li {
+        background-color: #fff;
+        padding: 5px;
+        border-radius: 10px;
+        margin: 10px 10px;
+    }
+    .start .right-col .skills li img {
+        width: 50px;
+        height: 50px;
+    }
+    @media (max-width: 768px) {
+        .start {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 5%;
+        }
+        .start .left-col {
+            width: 100%;
+            text-align: center;
+        }
+        .start .right-col {
+            width: 100%;
+        }
+        .start .right-col .skills {
+            justify-content: center;
+        }
+    }
+</style>
