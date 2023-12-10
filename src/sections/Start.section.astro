@@ -1,147 +1,323 @@
 ---
+import Typewriter from "../components/Typewriter.astro";
 type Skill = {
-    name: string;
-    icon: string;
-    link: string;
-}
-interface Props {
-    skills: Skill[]
-}
+	name: string;
+	icon: string;
+	link: string;
+};
 
-const { skills = [
-        {
-            name: "HTML",
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-            link: "https://developer.mozilla.org/en-US/docs/Web/HTML"
-        },
-        {
-            name: "CSS",
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-            link: "https://developer.mozilla.org/en-US/docs/Web/CSS"
-        },
-        {
-            name: "JavaScript",
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-            link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-        },
-        {
-            name: "TypeScript",
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-            link: "https://www.typescriptlang.org/"
-        },
-        {
-            name: "React",
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-            link: "https://reactjs.org/"
-        },
-        {
-            name: "Node.js",
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-            link: "https://nodejs.org/en/"
-        },
-        {
-            name: "MongoDB",
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-            link: "https://www.mongodb.com/"
-        },
-        {
-            name: "Git",
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-            link: "https://git-scm.com/"
-        },
-        {
-            name: "GitHub",
-            icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-            link: "https://github.com"
-        }
-    ] } = Astro.props;
+const skills = [
+	{
+		name: "HTML",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+		link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+	},
+	{
+		name: "CSS",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+		link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+	},
+	{
+		name: "JavaScript",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+		link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+	},
+	{
+		name: "TypeScript",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+		link: "https://www.typescriptlang.org/",
+	},
+	{
+		name: "React",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+		link: "https://reactjs.org/",
+	},
+	{
+		name: "Node.js",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+		link: "https://nodejs.org/en/",
+	},
+	{
+		name: "MongoDB",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+		link: "https://www.mongodb.com/",
+	},
+	{
+		name: "Git",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+		link: "https://git-scm.com/",
+	},
+	{
+		name: "GitHub",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+		link: "https://github.com",
+	},
+	{
+		name: "Visual Studio Code",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+		link: "https://code.visualstudio.com/",
+	},
+	{
+		name: "Figma",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+		link: "https://www.figma.com/",
+	},
+	{
+		name: "Linux",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+		link: "https://www.kernel.org/",
+	},
+	{
+		name: "Docker",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+		link: "https://www.docker.com/",
+	},
+	{
+		name: "Nginx",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg",
+		link: "https://www.nginx.com/",
+	},
+	{
+		name: "Apache",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg",
+		link: "https://httpd.apache.org/",
+	},
+	{
+		name: "MySQL",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+		link: "https://www.mysql.com/",
+	},
+	{
+		name: "Java",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+		link: "https://www.java.com/",
+	},
+	{
+		name: "C++",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
+		link: "https://isocpp.org/",
+	},
+	{
+		name: "C",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
+		link: "https://en.wikipedia.org/wiki/C_(programming_language)",
+	},
+	{
+		name: "Python",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+		link: "https://www.python.org/",
+	},
+	{
+		name: "Svelte",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg",
+		link: "https://svelte.dev/",
+	},
+	{
+		name: "Vue.js",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+		link: "https://vuejs.org/",
+	},
+	{
+		name: "Bootstrap",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+		link: "https://getbootstrap.com/",
+	},
+	{
+		name: "Tailwind CSS",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+		link: "https://tailwindcss.com/",
+	},
+	{
+		name: "Sass",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+		link: "https://sass-lang.com/",
+	},
+	{
+		name: "Bash",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg",
+		link: "https://www.gnu.org/software/bash/",
+	},
+	{
+		name: "Arduino",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg",
+		link: "https://www.arduino.cc/",
+	},
+	{
+		name: "Raspberry Pi",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg",
+		link: "https://www.raspberrypi.org/",
+	},
+	{
+		name: "Flutter",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
+		link: "https://flutter.dev/",
+	},
+	{
+		name: "Dart",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg",
+		link: "https://dart.dev/",
+	},
+	{
+		name: "Firebase",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+		link: "https://firebase.google.com/",
+	},
+	{
+		name: "Vercel",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@develop/icons/vercel/vercel-original.svg",
+		link: "https://vercel.com/",
+	},
+	{
+		name: "Next.js",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+		link: "https://nextjs.org/",
+	},
+	{
+		name: "Express",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+		link: "https://expressjs.com/",
+	},
+	{
+		name: "Electron",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg",
+		link: "https://www.electronjs.org/",
+	},
+	{
+		name: "Tauri",
+		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@develop/icons/tauri/tauri-original.svg",
+		link: "https://tauri.studio/",
+	},
+];
 ---
 
 <section class="start" id="start">
-    <div class="left-col">
-        <h1>Hey, my name is <span class="text-gradient">Simon</span></h1>
-        <h2>I'm a <span class="text-gradient">developer</span> from <span class="text-gradient">Villach, Austria</span></h2>
-    </div>
-    <div class="right-col">
-        <ul class="skills">
-            {skills.map((skill: Skill) => (
-                <li>
-                    <a href={skill.link} target="_blank" rel="noopener noreferrer">
-                        <img src={skill.icon} title={skill.name} alt={skill.name} />
-                        {/*<p>{skill.name}</p> */}
-                    </a>
-                </li>
-            ))}
-    </div>
+	<div class="left-col">
+		<h1>
+			<Typewriter
+				content="Hey, my name is Simon"
+				other={[
+					"I'm Simon",
+					"Hi, I'm Simon",
+					"Hello, I'm Simon",
+					"Guten Tag, ich bin Simon",
+					"Hey, my name is Simon",
+				]}
+			/>
+		</h1>
+		<h2>
+			I'm a <span class="text-gradient">developer</span> from <span class="text-gradient"
+				>Villach, Austria</span>
+		</h2>
+	</div>
+	<div class="right-col">
+		<ul class="skills">
+			{
+				skills.map((skill: Skill) => (
+					<li>
+						<a href={skill.link} target="_blank" rel="noopener noreferrer">
+							<img src={skill.icon} title={skill.name} alt={skill.name} />
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</div>
+	<style>
+		.text-gradient {
+			background-image: var(--accent-gradient);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-size: 400%;
+			background-position: 0%;
+		}
+
+		a {
+			text-decoration: none;
+			color: #000;
+		}
+
+		.start {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 10%;
+			height: 100%;
+		}
+		.start .left-col {
+			width: 50%;
+		}
+		.start .right-col {
+			width: 50%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.start .right-col .skills {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		.start .right-col .skills li {
+			background-color: #242424;
+			border: 1px solid #4b4b4b;
+			border-radius: 10px;
+			margin: 10px;
+			transition: background-color 0.2s ease-in-out;
+		}
+
+		.start .right-col .skills li:hover {
+			background-color: #414141;
+		}
+
+		.start .right-col .skills li a {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 5px;
+			text-decoration: none;
+			color: #fff;
+		}
+
+		.start .right-col .skills li img {
+			width: 50px;
+			height: 50px;
+		}
+
+		@media (max-width: 860px) {
+			.start {
+				padding: 0 5%;
+			}
+
+			.start .right-col .skills li {
+				margin: 5px;
+			}
+		}
+
+		@media (max-width: 768px) {
+			.start {
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				padding: 0 5%;
+			}
+			.start .left-col {
+				width: 100%;
+				text-align: center;
+			}
+			.start .right-col {
+				width: 100%;
+			}
+			.start .right-col .skills {
+				justify-content: center;
+			}
+		}
+	</style>
 </section>
-<style>
-    .text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-
-    a {
-        text-decoration: none;
-        color: #000;
-    }
-
-    .start {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 10%;
-        height: 100vh;
-    }
-    .start .left-col {
-        width: 50%;
-    }
-    .start .right-col {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .start .right-col .skills {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    .start .right-col .skills li {
-        background-color: #fff;
-        padding: 5px;
-        border-radius: 10px;
-        margin: 10px 10px;
-    }
-    .start .right-col .skills li img {
-        width: 50px;
-        height: 50px;
-    }
-    @media (max-width: 768px) {
-        .start {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 0 5%;
-        }
-        .start .left-col {
-            width: 100%;
-            text-align: center;
-        }
-        .start .right-col {
-            width: 100%;
-        }
-        .start .right-col .skills {
-            justify-content: center;
-        }
-    }
-</style>

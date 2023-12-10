@@ -1,0 +1,55 @@
+---
+// Typewriter effect
+interface Props {
+	content: string,
+    other?: string[]
+}
+
+const { content, other } = Astro.props;
+---
+<span class="typewriter">
+</span>
+
+<style>
+    .typewriter {
+        font-family: monospace;
+        color: #fff;
+        text-shadow: 0 0 10px #fff;
+        border-right: 0.1em solid white;
+        animation: blink 1.5s steps(1) infinite;
+    }
+
+    @keyframes blink {
+        0% {
+            border-color: transparent;
+        }
+
+        50% {
+            border-color: white;
+        }
+
+        100% {
+            border-color: transparent;
+        }
+    }
+</style>
+
+<script define:vars={{ content, other }}>
+    const typewriter = (text = "", i = 0) => {
+        if (i < text.length) {
+            document.querySelector('.typewriter').innerHTML += text.charAt(i);
+            i++;
+            setTimeout(() => typewriter(text, i), 100);
+        } else {
+            if (other.length > 0) {
+                const next = other.shift();
+                setTimeout(() => {
+                    document.querySelector('.typewriter').innerHTML = "";
+                    typewriter(next);
+                }, 5000);
+            }
+        }
+    }
+
+    typewriter(content);
+</script>
