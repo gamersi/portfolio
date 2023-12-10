@@ -239,22 +239,22 @@ const skills = [
 		.start {
 			display: flex;
 			flex-direction: row;
-			justify-content: space-between;
+			justify-content: flex-start;
 			align-items: center;
 			padding: 0 10%;
 			height: 100%;
 		}
-		.start .left-col {
+		.left-col {
 			width: 50%;
 		}
-		.start .right-col {
+		.right-col {
 			width: 50%;
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
+			justify-content: flex-start;
 			align-items: center;
 		}
-		.start .right-col .skills {
+		.right-col .skills {
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
@@ -264,7 +264,7 @@ const skills = [
 			padding: 0;
 			margin: 0;
 		}
-		.start .right-col .skills li {
+		.right-col .skills li {
 			background-color: #242424;
 			border: 1px solid #4b4b4b;
 			border-radius: 10px;
@@ -272,11 +272,11 @@ const skills = [
 			transition: background-color 0.2s ease-in-out;
 		}
 
-		.start .right-col .skills li:hover {
+		.right-col .skills li:hover {
 			background-color: #414141;
 		}
 
-		.start .right-col .skills li a {
+		art .right-col .skills li a {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -286,7 +286,7 @@ const skills = [
 			color: #fff;
 		}
     
-		.start .right-col .skills li img {
+		.right-col .skills li img {
 			width: 50px;
 			height: 50px;
 		}
@@ -296,7 +296,7 @@ const skills = [
 				padding: 0 5%;
 			}
 
-			.start .right-col .skills li {
+			.right-col .skills li {
 				margin: 5px;
 			}
 		}
@@ -304,18 +304,18 @@ const skills = [
 		@media (max-width: 768px) {
 			.start {
 				flex-direction: column;
-				justify-content: center;
+				justify-content: flex-start;
 				align-items: center;
 				padding: 0 5%;
 			}
-			.start .left-col {
+			.left-col {
 				width: 100%;
 				text-align: center;
 			}
-			.start .right-col {
+			.right-col {
 				width: 100%;
 			}
-			.start .right-col .skills {
+			.right-col .skills {
 				justify-content: center;
 			}
 		}
