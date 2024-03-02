@@ -1,0 +1,83 @@
+<div class="projects-container">
+    <a href="/projects/PassmanTRS" class="project">
+        <img src="/images/PassmanTRS.webp" alt="PassmanTRS" />
+        <h2>PassmanTRS</h2>
+        <p>A Passwordmanager written in Rust and Svelte.</p>
+    </a>
+    <a href="https://wettus.gamersi.at" class="project">
+        <img src="/images/Wettus.webp" alt="Wettus" />
+        <h2>Wettus</h2>
+        <p>A modern Weather App in German.</p>
+    </a>
+    <a href="/projects/aoc23" class="project">
+        <h2>Advent of Code 2023</h2>
+        <p>My Advent of Code 2023 Solutions.</p>
+    </a>
+    <a href="/projects/DynQR" class="project">
+        <h2>DynQR</h2>
+        <p>A Dynamic QR Code Generator written in React and express.</p>
+    </a>
+    <a href="/projects/jspong" class="project">
+        <h2>jspong</h2>
+        <p>A simple Pong Game written in JavaScript.</p>
+    </a>
+    <a href="/projects/jssnake" class="project">
+        <h2>jssnake</h2>
+        <p>A simple Snake Game written in JavaScript.</p>
+    </a>
+    <a href="/projects/WordleWis" class="project">
+        <h2>WordleWis</h2>
+        <p>A Wordle clone with jQuery.</p>
+    </a>
+</div>
+
+<style>
+    :root {
+        --card-bg-color: #2c2c2c;
+        --card-bg-color-hover: #3f3f3f;
+        --border-color: #474747;
+        --sec-text-color: #888888;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    .projects-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .project {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: var(--card-bg-color);
+        border: 1px solid var(--border-color);
+        transition: 0.3s;
+    }
+
+    .project:hover {
+        background-color: var(--card-bg-color-hover);
+    }
+
+    .project img {
+        height: 100px;
+        border-radius: 15px;
+        margin-bottom: 10px;
+    }
+
+    .project h2 {
+        margin: 0;
+    }
+
+    .project p {
+        margin: 0;
+    }
+</style>

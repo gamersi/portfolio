@@ -1,0 +1,60 @@
+---
+import Layout from "../../layouts/Layout.astro"
+
+const title = "PassmanTRS"
+
+---
+
+<Layout title={title}>
+  <article>
+    <h1>{title}</h1>
+    <section>
+      <h2>About</h2>
+      <p>
+        PassmanTRS is a password manager that is designed to be simple and easy to use. It is built with Rust and Svelte.
+      </p>
+      <a href="https://github.com/gamersi/PassmanTRS">GitHub</a>
+    </section>
+
+    <section>
+      <h2>Features</h2>
+      <ul>
+        <li>Simple and easy to use</li>
+        <li>Secure</li>
+        <li>Fast</li>
+        <li>Cross-platform</li>
+        <li>Basic password Features</li>
+        <li>Password Generator</li>
+        <li>Free and Open Source</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Technologies Used</h2>
+      <ul>
+        <li>Rust</li>
+        <li>Svelte</li>
+        <li>Tauri</li>
+        <li>PBKDF2</li>
+        <li>bcrypt</li>
+        <li>AES-256-GCM</li>
+      </ul>
+    </section>
+  </article>
+</Layout>
+
+<style>
+  article {
+    padding: 0.25rem 10%;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  ul {
+    padding-left: 1rem;
+  }
+
+  a {
+    color: var(--text);
+  }
+</style>
