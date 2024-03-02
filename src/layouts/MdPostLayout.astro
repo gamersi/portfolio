@@ -1,0 +1,44 @@
+---
+import Layout from "./Layout.astro";
+
+interface Props {
+    frontmatter: {
+        layout: string;
+        title: string;
+        pubDate: string;
+        description: string;
+        author: string;
+        image: {
+            hasImage: boolean;
+            url: string;
+            alt: string;
+        };
+        tags: string[];
+        lang: string | null;
+    };
+}
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+  <h1>{frontmatter.title}</h1>
+  <p>Published on {frontmatter.pubDate}{frontmatter.lang && ` in ${frontmatter.lang}`} by {frontmatter.author}</p>
+  <p>Tags: {frontmatter.tags.join(", ")}</p>
+  {frontmatter.image.hasImage && (
+    <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+  )}
+  <div class="content">
+    <slot />
+  </div>
+</Layout>
+
+<style>
+  p {
+    font-size: 0.8em;
+  }
+  .content {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+  }
+</style>
