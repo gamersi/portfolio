@@ -28,7 +28,9 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<Navbar title='Simon' />
-		<slot />
+		<main>
+			<slot />
+		</main>
 	</body>
 </html>
 <style is:global>
@@ -50,7 +52,7 @@ const { title } = Astro.props;
 		scroll-behavior: smooth;
 	}
 	html {
-		font-family: system-ui, sans-serif;
+		font-family: sans-serif, system-ui, 'Segoe UI', Roboto;
 		background: #13151a;
 		background-size: 224px;
 	}
@@ -69,5 +71,9 @@ const { title } = Astro.props;
 	main {
 		padding-top: 60px;
 		height: 100dvh;
+		margin: auto;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 1.25rem;
 	}
 </style>
