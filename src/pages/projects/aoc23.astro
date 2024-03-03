@@ -5,25 +5,26 @@ const title = 'Advent of Code 2023';
 ---
 
 <Layout title={title}>
-    <article>
-        <h1>{title}</h1>
-        <section>
-            <h2>About</h2>
-            <p>
+    <article class="p-4">
+        <h1 class="text-3xl font-bold">{title}</h1>
+        <section class="mt-4">
+            <h2 class="text-2xl font-bold">About</h2>
+            <p class="text-lg">
                 This is a collection of my solutions to the 2023 Advent of Code.
                 I'm using Rust for this year's solutions. I'm trying to keep the
                 solutions as fast as possible with as little dependencies as
                 possible. I'm also trying to keep the solutions as readable as
                 possible.
             </p>
-            <a href="https://github.com/gamersi/adventofcode-solutions-2023"
-                >GitHub</a
+            <a
+                href="https://github.com/gamersi/adventofcode-solutions-2023"
+                class="text-blue-500">GitHub</a
             >
         </section>
 
-        <section>
-            <h2>Features</h2>
-            <ul>
+        <section class="mt-4">
+            <h2 class="text-2xl font-bold">Features</h2>
+            <ul class="list-disc list-inside">
                 <li>Fast</li>
                 <li>(Kinda) Easy to read</li>
                 <li>Tested</li>
@@ -31,28 +32,12 @@ const title = 'Advent of Code 2023';
             </ul>
         </section>
 
-        <section>
-            <h2>Technologies Used</h2>
-            <ul>
+        <section class="mt-4">
+            <h2 class="text-2xl font-bold">Technologies Used</h2>
+            <ul class="list-disc list-inside">
                 <li>Rust</li>
                 <li>regex</li>
             </ul>
         </section>
     </article>
 </Layout>
-
-<style>
-    article {
-        padding: 0.25rem 10%;
-        margin: 0 auto;
-        line-height: 1.6;
-    }
-
-    ul {
-        padding-left: 1rem;
-    }
-
-    a {
-        color: var(--text);
-    }
-</style>

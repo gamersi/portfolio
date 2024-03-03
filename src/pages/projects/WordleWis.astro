@@ -5,46 +5,35 @@ const title = 'WordleWis';
 ---
 
 <Layout title={title}>
-    <article>
-        <h1>{title}</h1>
-        <section>
-            <h2>About</h2>
-            <p>A simple german wordle game written in JavaScript and jQuery.</p>
-            <a href="https://github.com/gamersi/WordleWis">GitHub</a> | <a
-                href="https://gamersi.github.io/WordleWis/">Demo</a
+    <article class="p-4">
+        <h1 class="text-3xl font-bold">{title}</h1>
+        <section class="mt-4">
+            <h2 class="text-2xl font-bold">About</h2>
+            <p class="text-lg">
+                A simple german wordle game written in JavaScript and jQuery.
+            </p>
+            <a href="https://github.com/gamersi/WordleWis" class="text-blue-500"
+                >GitHub</a
+            > | <a
+                href="https://gamersi.github.io/WordleWis/"
+                class="text-blue-500">Demo</a
             >
         </section>
 
-        <section>
-            <h2>Features</h2>
-            <ul>
+        <section class="mt-4">
+            <h2 class="text-2xl font-bold">Features</h2>
+            <ul class="list-disc list-inside">
                 <li>Simple</li>
                 <li>Free and open source</li>
             </ul>
         </section>
 
-        <section>
-            <h2>Technologies Used</h2>
-            <ul>
+        <section class="mt-4">
+            <h2 class="text-2xl font-bold">Technologies Used</h2>
+            <ul class="list-disc list-inside">
                 <li>Vanilla JavaScript</li>
                 <li>jQuery</li>
             </ul>
         </section>
     </article>
 </Layout>
-
-<style>
-    article {
-        padding: 0.25rem 10%;
-        margin: 0 auto;
-        line-height: 1.6;
-    }
-
-    ul {
-        padding-left: 1rem;
-    }
-
-    a {
-        color: var(--text);
-    }
-</style>
