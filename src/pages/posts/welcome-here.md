@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MdPostLayout.astro
 title: 'Welcome to my portfolio'
-pubDate: 02.03.2024
+pubDate: 03-02-2024
 description: 'This is my portfolio, where I will be sharing my projects and thoughts.'
 author: 'gamersi'
 image:
