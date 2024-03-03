@@ -1,53 +1,58 @@
 ---
-import Layout from "../../layouts/Layout.astro"
+import Layout from '../../layouts/Layout.astro';
 
-const title = "Advent of Code 2023"
-
+const title = 'Advent of Code 2023';
 ---
 
 <Layout title={title}>
-  <article>
-    <h1>{title}</h1>
-    <section>
-      <h2>About</h2>
-      <p>
-        This is a collection of my solutions to the 2023 Advent of Code. I'm using Rust for this year's solutions. I'm trying to keep the solutions as fast as possible with as little dependencies as possible. I'm also trying to keep the solutions as readable as possible.
-      </p>
-      <a href="https://github.com/gamersi/adventofcode-solutions-2023">GitHub</a>
-    </section>
+    <article>
+        <h1>{title}</h1>
+        <section>
+            <h2>About</h2>
+            <p>
+                This is a collection of my solutions to the 2023 Advent of Code.
+                I'm using Rust for this year's solutions. I'm trying to keep the
+                solutions as fast as possible with as little dependencies as
+                possible. I'm also trying to keep the solutions as readable as
+                possible.
+            </p>
+            <a href="https://github.com/gamersi/adventofcode-solutions-2023"
+                >GitHub</a
+            >
+        </section>
 
-    <section>
-      <h2>Features</h2>
-      <ul>
-        <li>Fast</li>
-        <li>(Kinda) Easy to read</li>
-        <li>Tested</li>
-        <li>first day to day 21 done</li>
-      </ul>
-    </section>
+        <section>
+            <h2>Features</h2>
+            <ul>
+                <li>Fast</li>
+                <li>(Kinda) Easy to read</li>
+                <li>Tested</li>
+                <li>first day to day 21 done</li>
+            </ul>
+        </section>
 
-    <section>
-      <h2>Technologies Used</h2>
-      <ul>
-        <li>Rust</li>
-        <li>regex</li>
-      </ul>
-    </section>
-  </article>
+        <section>
+            <h2>Technologies Used</h2>
+            <ul>
+                <li>Rust</li>
+                <li>regex</li>
+            </ul>
+        </section>
+    </article>
 </Layout>
 
 <style>
-  article {
-    padding: 0.25rem 10%;
-    margin: 0 auto;
-    line-height: 1.6;
-  }
-  
-  ul {
-    padding-left: 1rem;
-  }
+    article {
+        padding: 0.25rem 10%;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
 
-  a {
-    color: var(--text);
-  }
+    ul {
+        padding-left: 1rem;
+    }
+
+    a {
+        color: var(--text);
+    }
 </style>

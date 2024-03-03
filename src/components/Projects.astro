@@ -1,83 +1,64 @@
-<div class="projects-container">
-    <a href="/projects/PassmanTRS" class="project">
-        <img src="/images/PassmanTRS.webp" alt="PassmanTRS" />
-        <h2>PassmanTRS</h2>
-        <p>A Passwordmanager written in Rust and Svelte.</p>
-    </a>
-    <a href="https://wettus.gamersi.at" class="project">
-        <img src="/images/Wettus.webp" alt="Wettus" />
-        <h2>Wettus</h2>
-        <p>A modern Weather App in German.</p>
-    </a>
-    <a href="/projects/aoc23" class="project">
-        <h2>Advent of Code 2023</h2>
-        <p>My Advent of Code 2023 Solutions.</p>
-    </a>
-    <a href="/projects/DynQR" class="project">
-        <h2>DynQR</h2>
-        <p>A Dynamic QR Code Generator written in React and express.</p>
-    </a>
-    <a href="/projects/jspong" class="project">
-        <h2>jspong</h2>
-        <p>A simple Pong Game written in JavaScript.</p>
-    </a>
-    <a href="/projects/jssnake" class="project">
-        <h2>jssnake</h2>
-        <p>A simple Snake Game written in JavaScript.</p>
-    </a>
-    <a href="/projects/WordleWis" class="project">
-        <h2>WordleWis</h2>
-        <p>A Wordle clone with jQuery.</p>
-    </a>
+---
+let projects = [
+    {
+        name: 'PassmanTRS',
+        description: 'A Passwordmanager written in Rust and Svelte.',
+        image: '/images/PassmanTRS.webp',
+        link: '/projects/PassmanTRS',
+    },
+    {
+        name: 'Wettus',
+        description: 'A modern Weather App in German.',
+        image: '/images/Wettus.webp',
+        link: 'https://wettus.gamersi.at',
+    },
+    {
+        name: 'Advent of Code 2023',
+        description: 'My Advent of Code 2023 Solutions.',
+        image: '/images/aoc23.webp',
+        link: '/projects/aoc23',
+    },
+    {
+        name: 'DynQR',
+        description:
+            'A Dynamic QR Code Generator written in React and express.',
+        link: '/projects/DynQR',
+    },
+    {
+        name: 'jspong',
+        description: 'A simple Pong Game written in JavaScript.',
+        link: '/projects/jspong',
+    },
+    {
+        name: 'jssnake',
+        description: 'A simple Snake Game written in JavaScript.',
+        link: '/projects/jssnake',
+    },
+    {
+        name: 'WordleWis',
+        description: 'A Wordle clone with jQuery.',
+        link: '/projects/WordleWis',
+    },
+];
+---
+
+<div class="flex flex-wrap justify-center">
+    {
+        projects.map((project) => (
+            <a
+                href={project.link}
+                class="m-3 p-3 border-2 border-gray-600 rounded-lg bg-gray-700 text-gray-50 hover:bg-gray-600 transition-colors duration-200 flex flex-col items-center justify-center"
+            >
+                {project.image && (
+                    <img
+                        src={project.image}
+                        alt={project.name}
+                        class="h-32 object-cover"
+                    />
+                )}
+                <h2 class="text-3xl font-bold mt-4">{project.name}</h2>
+                <p class="text-lg text-center">{project.description}</p>
+            </a>
+        ))
+    }
 </div>
-
-<style>
-    :root {
-        --card-bg-color: #2c2c2c;
-        --card-bg-color-hover: #3f3f3f;
-        --border-color: #474747;
-        --sec-text-color: #888888;
-    }
-
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
-    
-    .projects-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .project {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 10px;
-        padding: 10px;
-        border-radius: 10px;
-        background-color: var(--card-bg-color);
-        border: 1px solid var(--border-color);
-        transition: 0.3s;
-    }
-
-    .project:hover {
-        background-color: var(--card-bg-color-hover);
-    }
-
-    .project img {
-        height: 100px;
-        border-radius: 15px;
-        margin-bottom: 10px;
-    }
-
-    .project h2 {
-        margin: 0;
-    }
-
-    .project p {
-        margin: 0;
-    }
-</style>

@@ -1,91 +1,31 @@
 ---
-import Typewriter from "../components/Typewriter.astro";
-import Projects from "../components/Projects.astro";
+import Typewriter from '../components/Typewriter.astro';
+import Projects from '../components/Projects.astro';
+import TextGradient from 'src/components/TextGradient.astro';
 ---
 
-<section class="start" id="start">
-	<h1>
-		<Typewriter
-			content="Hey, my name is Simon."
-			other={[
-				"I'm Simon.",
-				"Hi, I'm Simon.",
-				"Hello, I'm Simon.",
-				"Guten Tag, ich bin Simon.",
-				"Hey, my name is Simon.",
-			]}
-		/>
-	</h1>
-	<h2>
-		I'm a <span class="text-gradient">developer</span> from <span class="text-gradient">Villach, Austria</span>
-	</h2>
-	<section class="projects">
-		<h1>Some of my Projects</h1>
-		<Projects />
-	</section>
+<section id="start" class="flex flex-col items-center justify-start h-full">
+    <h1 class="text-5xl font-bold">
+        <Typewriter
+            content="Hey, my name is Simon."
+            other={[
+                "I'm Simon.",
+                "Hi, I'm Simon.",
+                "Hello, I'm Simon.",
+                'Guten Tag, ich bin Simon.',
+                'Hey, my name is Simon.',
+            ]}
+        />
+    </h1>
+    <h2 class="text-2xl mt-4">
+        I'm a <TextGradient>developer</TextGradient> from <TextGradient
+            >Villach, Austria</TextGradient
+        > who loves to create <TextGradient>beautiful</TextGradient> and <TextGradient
+            >functional</TextGradient
+        > things.
+    </h2>
+    <section class="flex flex-col items-center justify-center mt-8">
+        <h1 class="text-3xl font-bold">Projects</h1>
+        <Projects />
+    </section>
 </section>
-
-<style>
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-
-	a {
-		text-decoration: none;
-		color: #000;
-	}
-
-	.start {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: center;
-		padding: 5%;
-		height: 100%;
-	}
-
-	.projects {
-		margin-top: 3rem;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.projects h1 {
-		font-size: 2rem;
-	}
-
-	@media (max-width: 860px) {
-		.start {
-			padding: 0 5%;
-		}
-
-		.right-col .skills li {
-			margin: 5px;
-		}
-	}
-
-	@media (max-width: 768px) {
-		.start {
-			flex-direction: column;
-			justify-content: flex-start;
-			align-items: center;
-			padding: 0 5%;
-		}
-		.left-col {
-			width: 100%;
-			text-align: center;
-		}
-		.right-col {
-			width: 100%;
-		}
-		.right-col .skills {
-			justify-content: center;
-		}
-	}
-</style>

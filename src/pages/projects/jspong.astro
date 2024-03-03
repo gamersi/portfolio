@@ -1,50 +1,49 @@
 ---
-import Layout from "../../layouts/Layout.astro"
+import Layout from '../../layouts/Layout.astro';
 
-const title = "jspong"
-
+const title = 'jspong';
 ---
 
 <Layout title={title}>
-  <article>
-    <h1>{title}</h1>
-    <section>
-      <h2>About</h2>
-      <p>
-        A simple pong game written in JavaScript.
-      </p>
-      <a href="https://github.com/gamersi/jspong">GitHub</a> | <a href="https://jspong.gamersi.at">Demo</a>
-    </section>
+    <article>
+        <h1>{title}</h1>
+        <section>
+            <h2>About</h2>
+            <p>A simple pong game written in JavaScript.</p>
+            <a href="https://github.com/gamersi/jspong">GitHub</a> | <a
+                href="https://jspong.gamersi.at">Demo</a
+            >
+        </section>
 
-    <section>
-      <h2>Features</h2>
-      <ul>
-        <li>Simple</li>
-        <li>Free and open source</li>
-      </ul>
-    </section>
+        <section>
+            <h2>Features</h2>
+            <ul>
+                <li>Simple</li>
+                <li>Free and open source</li>
+            </ul>
+        </section>
 
-    <section>
-      <h2>Technologies Used</h2>
-      <ul>
-        <li>Vanilla JavaScript</li>
-      </ul>
-    </section>
-  </article>
+        <section>
+            <h2>Technologies Used</h2>
+            <ul>
+                <li>Vanilla JavaScript</li>
+            </ul>
+        </section>
+    </article>
 </Layout>
 
 <style>
-  article {
-    padding: 0.25rem 10%;
-    margin: 0 auto;
-    line-height: 1.6;
-  }
+    article {
+        padding: 0.25rem 10%;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
 
-  ul {
-    padding-left: 1rem;
-  }
+    ul {
+        padding-left: 1rem;
+    }
 
-  a {
-    color: var(--text);
-  }
+    a {
+        color: var(--text);
+    }
 </style>

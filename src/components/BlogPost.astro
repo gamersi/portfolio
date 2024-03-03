@@ -1,42 +1,11 @@
 ---
-const { title, url, date, lang } = Astro.props
+const { title, url, date, lang } = Astro.props;
 ---
-<a href={url}>
-    <h5>{title}</h5>
-    <p>{date} {lang && `(${lang})`}</p>
+
+<a
+    href={url}
+    class="mb-3 p-3 border-2 border-gray-600 rounded-lg bg-gray-700 text-gray-50 hover:bg-gray-600 transition-colors duration-200"
+>
+    <h5 class="mb-1 text-xl font-bold">{title}</h5>
+    <p class="text-sm text-gray-300">{date}{lang && ` (${lang})`}</p>
 </a>
-
-<style>
-    :root {
-        --card-bg-color: #2c2c2c;
-        --card-bg-color-hover: #3f3f3f;
-        --border-color: #474747;
-        --sec-text-color: #888888;
-    }
-
-    a {
-        margin-bottom: 0.5rem;
-        padding: 1rem;
-        border-radius: .5rem;
-        border: 1px solid var(--border-color);
-        background-color: var(--card-bg-color);
-        color: #dadada;
-        text-decoration: none;
-        transition: background-color 0.2s;
-    }
-    
-    a:hover {
-        background-color: var(--card-bg-color-hover);
-    }
-
-    h5 {
-        margin: 0;
-        font-size: 1.5rem;
-    }
-
-    p {
-        margin: 0;
-        font-size: 1rem;
-        color: var(--sec-text-color);
-    }
-</style>
