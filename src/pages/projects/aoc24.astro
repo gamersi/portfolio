@@ -1,0 +1,45 @@
+---
+import Layout from '@layouts/Layout.astro';
+
+const title = 'Advent of Code 2024';
+---
+
+<Layout title={title}>
+    <article class="p-4">
+        <h1 class="text-3xl font-bold">{title}</h1>
+        <section class="mt-4">
+            <h2 class="text-2xl font-bold">About</h2>
+            <p class="text-lg">
+                This is a collection of my solutions to the 2024 Advent of Code.
+                I'm using Go for this year's solutions. I'm trying to keep the
+                solutions as fast as possible with as little dependencies as
+                possible. I'm also trying to keep the solutions as readable as
+                possible.
+            </p>
+            <a
+                href="https://github.com/gamersi/aoc24"
+                class="text-blue-500">GitHub</a
+            >
+        </section>
+
+        <section class="mt-4">
+            <h2 class="text-2xl font-bold">Features</h2>
+            <ul class="list-disc list-inside">
+                <li>Pretty fast</li>
+                <li>(Kinda) Easy to read</li>
+                <li>Tested</li>
+                <li>All days done</li>
+            </ul>
+        </section>
+
+        <section class="mt-4">
+            <h2 class="text-2xl font-bold">Technologies Used</h2>
+            <ul class="list-disc list-inside">
+                <li>Go</li>
+                <li>pflag for parsing flags</li>
+                <li>bfs & dfs</li>
+                <li>regex</li>
+            </ul>
+        </section>
+    </article>
+</Layout>
