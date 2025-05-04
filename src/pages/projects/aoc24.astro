@@ -1,7 +1,7 @@
 ---
 import Layout from '@layouts/Layout.astro';
 
-const title = 'PassmanTRS';
+const title = 'Advent of Code 2024';
 ---
 
 <Layout title={title}>
@@ -10,11 +10,14 @@ const title = 'PassmanTRS';
         <section class="mt-4">
             <h2 class="text-2xl font-bold">About</h2>
             <p class="text-lg">
-                PassmanTRS is a password manager that is designed to be simple
-                and easy to use. It is built with Rust and Svelte.
+                This is a collection of my solutions to the 2024 Advent of Code.
+                I'm using Go for this year's solutions. I'm trying to keep the
+                solutions as fast as possible with as little dependencies as
+                possible. I'm also trying to keep the solutions as readable as
+                possible.
             </p>
             <a
-                href="https://github.com/gamersi/PassmanTRS"
+                href="https://github.com/gamersi/aoc24"
                 class="text-blue-500">GitHub</a
             >
         </section>
@@ -22,25 +25,20 @@ const title = 'PassmanTRS';
         <section class="mt-4">
             <h2 class="text-2xl font-bold">Features</h2>
             <ul class="list-disc list-inside">
-                <li>Simple and easy to use</li>
-                <li>Secure</li>
-                <li>Fast</li>
-                <li>Cross-platform</li>
-                <li>Basic password Features</li>
-                <li>Password Generator</li>
-                <li>Free and Open Source</li>
+                <li>Pretty fast</li>
+                <li>(Kinda) Easy to read</li>
+                <li>Tested</li>
+                <li>All days done</li>
             </ul>
         </section>
 
         <section class="mt-4">
             <h2 class="text-2xl font-bold">Technologies Used</h2>
             <ul class="list-disc list-inside">
-                <li>Rust</li>
-                <li>Svelte</li>
-                <li>Tauri</li>
-                <li>PBKDF2</li>
-                <li>bcrypt</li>
-                <li>AES-256-GCM</li>
+                <li>Go</li>
+                <li>pflag for parsing flags</li>
+                <li>bfs & dfs</li>
+                <li>regex</li>
             </ul>
         </section>
     </article>
