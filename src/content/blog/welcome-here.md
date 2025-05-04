@@ -1,11 +1,9 @@
 ---
-layout: ../../layouts/MdPostLayout.astro
 title: 'Welcome to my portfolio'
-pubDate: 03-02-2024
-description: 'This is my portfolio, where I will be sharing my projects and thoughts.'
+pubDate: 03-02-2024 # This follows the format MM-DD-YYYY
 author: 'gamersi'
 image:
-    hasImage: false
+   hasImage: false
 lang: 'English'
 tags: ['portfolio', 'welcome']
 ---

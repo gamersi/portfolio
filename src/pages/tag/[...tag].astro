@@ -3,12 +3,20 @@ import { getCollection } from 'astro:content';
 import BlogPost from '@components/BlogPost.astro';
 import Layout from '@layouts/Layout.astro';
 const title = 'gamersi Blog';
-const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
+export async function getStaticPaths() {
+    const posts = await getCollection('blog');
+    const tags = posts.map((post) => post.data.tags).flat();
+    return tags.map((tag) => ({
+        params: { tag },
+    }));
+}
+
+const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()).filter((post) => post.data.tags.includes(Astro.params.tag ?? ''));
 ---
 
 <Layout title={title}>
-    <h1 class="text-4xl font-bold">Welcome to my Blog!</h1>
-    <p class="mt-4">Here are my latest posts:</p>
+    <h1 class="text-4xl font-bold">Tag: {Astro.params.tag}</h1>
     <div class="flex flex-row flex-wrap gap-4 mt-4">
         {
             posts.map((post) => (
