@@ -1,0 +1,20 @@
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Comment: User ID:	Simon <hello@gamersi.at>
+Comment: Valid from:	08.07.24 20:41
+Comment: Valid until:	01.06.28 23:58
+Comment: Type:	255-bit EdDSA (secret key available)
+Comment: Usage:	Signing, Encryption, Certifying User IDs
+Comment: Fingerprint:	B7733AEF8ADC7127DDA613BCAB36A77E2A8790AF
+
+mDMEZowy5BYJKwYBBAHaRw8BAQdApw3U/tQZArWLRJR6vSUOBiIQLh0lleRu6Ri3
+fSkUuVm0GFNpbW9uIDxoZWxsb0BnYW1lcnNpLmF0PoiZBBMWCgBBAhsDBQsJCAcC
+AiICBhUKCQgLAgQWAgMBAh4HAheAFiEEt3M674rccSfdphO8qzanfiqHkK8FAmg9
+UrkFCQdVhj8ACgkQqzanfiqHkK+oPAD/S1ws95DpyTscv2S6KBr3Syir2OjvUUQC
+e7b9Z7aAwFsBAJUS01rkvihM0NXjBZD98OLXLyUP5FEf8si2wjn6IQ4NuDgEZowy
+5BIKKwYBBAGXVQEFAQEHQDi//pB7q5wWrVqgTez0iGShX7clNHZSZp8bf7lti9g3
+AwEIB4h+BBgWCgAmAhsMFiEEt3M674rccSfdphO8qzanfiqHkK8FAmg9UrkFCQdV
+hj8ACgkQqzanfiqHkK9VHAD+JPHYMBVUugAoIWiMl8jgHjZdBOkawtcscM5g+c28
+SuIA/isoNqGJOBGCjr7olnk091iiQRaAXEYOliWu8oehQL8N
+=lYWJ
+-----END PGP PUBLIC KEY BLOCK-----
+
