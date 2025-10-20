@@ -1,39 +1,25 @@
 ---
-import Layout from '@layouts/Layout.astro';
+import ProjectLayout from '@layouts/ProjectLayout.astro';
 
 const title = 'WordleWis';
+const about = `A simple german wordle game written in JavaScript and jQuery.`;
+const githubUrl = 'https://github.com/gamersi/WordleWis';
+const demoUrl = 'https://gamersi.github.io/WordleWis/';
+const features = [
+    'Simple',
+    'Free and open source'
+];
+const technologies = [
+    'Vanilla JavaScript',
+    'jQuery'
+];
 ---
 
-<Layout title={title}>
-    <article class="p-4">
-        <h1 class="text-3xl font-bold">{title}</h1>
-        <section class="mt-4">
-            <h2 class="text-2xl font-bold">About</h2>
-            <p class="text-lg">
-                A simple german wordle game written in JavaScript and jQuery.
-            </p>
-            <a href="https://github.com/gamersi/WordleWis" class="text-blue-500"
-                >GitHub</a
-            > | <a
-                href="https://gamersi.github.io/WordleWis/"
-                class="text-blue-500">Demo</a
-            >
-        </section>
-
-        <section class="mt-4">
-            <h2 class="text-2xl font-bold">Features</h2>
-            <ul class="list-disc list-inside">
-                <li>Simple</li>
-                <li>Free and open source</li>
-            </ul>
-        </section>
-
-        <section class="mt-4">
-            <h2 class="text-2xl font-bold">Technologies Used</h2>
-            <ul class="list-disc list-inside">
-                <li>Vanilla JavaScript</li>
-                <li>jQuery</li>
-            </ul>
-        </section>
-    </article>
-</Layout>
+<ProjectLayout 
+    {title} 
+    {about} 
+    {githubUrl} 
+    {demoUrl}
+    {features} 
+    {technologies} 
+/>

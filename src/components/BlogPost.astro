@@ -6,6 +6,6 @@ const { title, url, date, lang } = Astro.props;
     href={url}
     class="mb-3 p-3 border-2 border-gray-600 rounded-lg bg-gray-700 text-gray-50 hover:bg-gray-600 transition-colors duration-200"
 >
-    <h5 class="mb-1 text-xl font-bold">{title}</h5>
+    <h5 class="mb-1 text-xl font-bold" transition:name={`title-${title}`}>{title}</h5>
     <p class="text-sm text-gray-300">{new Date(date).toLocaleDateString()}{lang && ` (${lang})`}</p>
 </a>

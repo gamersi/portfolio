@@ -1,43 +1,30 @@
 ---
-import Layout from '@layouts/Layout.astro';
+import ProjectLayout from '@layouts/ProjectLayout.astro';
 
 const title = 'DynQR';
+const about = `DynQR is a simple and easy to use Dynamic QR code generator. It
+allows you to generate QR codes for any text or URL. It also
+allows you to download the QR code as an image.`;
+const githubUrl = 'https://github.com/gamersi/DynQR';
+const features = [
+    'Simple and easy to use',
+    'Generates QR codes for any text or URL',
+    'Allows you to download the QR code as an image',
+    'Allows for editing the content of the QR code',
+    'Allows for deactivating the QR code',
+    'Free and open source'
+];
+const technologies = [
+    'React',
+    'Node.js',
+    'Express'
+];
 ---
 
-<Layout title={title}>
-    <article class="p-4">
-        <h1 class="text-3xl font-bold">{title}</h1>
-        <section class="mt-4">
-            <h2 class="text-2xl font-bold">About</h2>
-            <p class="text-lg">
-                DynQR is a simple and easy to use Dynamic QR code generator. It
-                allows you to generate QR codes for any text or URL. It also
-                allows you to download the QR code as an image.
-            </p>
-            <a href="https://github.com/gamersi/DynQR" class="text-blue-500"
-                >GitHub</a
-            >
-        </section>
-
-        <section class="mt-4">
-            <h2 class="text-2xl font-bold">Features</h2>
-            <ul class="list-disc list-inside">
-                <li>Simple and easy to use</li>
-                <li>Generates QR codes for any text or URL</li>
-                <li>Allows you to download the QR code as an image</li>
-                <li>Allows for editing the content of the QR code</li>
-                <li>Allows for deactivating the QR code</li>
-                <li>Free and open source</li>
-            </ul>
-        </section>
-
-        <section class="mt-4">
-            <h2 class="text-2xl font-bold">Technologies Used</h2>
-            <ul class="list-disc list-inside">
-                <li>React</li>
-                <li>Node.js</li>
-                <li>Express</li>
-            </ul>
-        </section>
-    </article>
-</Layout>
+<ProjectLayout 
+    {title} 
+    {about} 
+    {githubUrl} 
+    {features} 
+    {technologies} 
+/>

@@ -20,7 +20,7 @@ const { data } = Astro.props;
 ---
 
 <Layout title={data?.title ?? ''}>
-    <h1 class="text-5xl font-bold">{data?.title}</h1>
+    <h1 class="text-5xl font-bold" transition:name={`title-${data?.title}`}>{data?.title}</h1>
     <p class="text-gray-300">
         Published on {data?.pubDate.toLocaleDateString()}{
             data?.lang && ` in ${data?.lang}`
@@ -36,6 +36,7 @@ const { data } = Astro.props;
     {
         data?.image.hasImage && (
             <img
+                transition:name={`image-${data?.image.url}`}
                 src={data?.image.url}
                 width="300"
                 alt={data?.image.alt}

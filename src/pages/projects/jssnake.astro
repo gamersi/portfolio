@@ -1,35 +1,24 @@
 ---
-import Layout from '@layouts/Layout.astro';
+import ProjectLayout from '@layouts/ProjectLayout.astro';
 
 const title = 'jssnake';
+const about = `A simple snake game written in JavaScript.`;
+const githubUrl = 'https://github.com/gamersi/js-snake';
+const demoUrl = 'https://jssnake.gamersi.at';
+const features = [
+    'Simple',
+    'Free and open source'
+];
+const technologies = [
+    'Vanilla JavaScript'
+];
 ---
 
-<Layout title={title}>
-    <article class="p-4">
-        <h1 class="text-3xl font-bold">{title}</h1>
-        <section class="mt-4">
-            <h2 class="text-2xl font-bold">About</h2>
-            <p class="text-lg">A simple snake game written in JavaScript.</p>
-            <a href="https://github.com/gamersi/js-snake" class="text-blue-500"
-                >GitHub</a
-            > | <a href="https://jssnake.gamersi.at" class="text-blue-500"
-                >Demo</a
-            >
-        </section>
-
-        <section class="mt-4">
-            <h2 class="text-2xl font-bold">Features</h2>
-            <ul class="list-disc list-inside">
-                <li>Simple</li>
-                <li>Free and open source</li>
-            </ul>
-        </section>
-
-        <section class="mt-4">
-            <h2 class="text-2xl font-bold">Technologies Used</h2>
-            <ul class="list-disc list-inside">
-                <li>Vanilla JavaScript</li>
-            </ul>
-        </section>
-    </article>
-</Layout>
+<ProjectLayout 
+    {title} 
+    {about} 
+    {githubUrl} 
+    {demoUrl}
+    {features} 
+    {technologies} 
+/>

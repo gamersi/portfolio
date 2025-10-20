@@ -1,0 +1,49 @@
+---
+import Layout from './Layout.astro';
+
+interface Props {
+    title: string;
+    about: string;
+    githubUrl?: string;
+    demoUrl?: string;
+    features: string[];
+    technologies: string[];
+}
+
+const { title, about, githubUrl, demoUrl, features, technologies } = Astro.props;
+---
+
+<Layout title={title}>
+    <article class="p-4">
+        <h1 class="text-3xl font-bold" transition:name={`title-${title}`}>{title}</h1>
+        <section class="mt-4">
+            <h2 class="text-2xl font-bold">About</h2>
+            <p class="text-lg">
+                {about}
+            </p>
+            {githubUrl && (
+                <a href={githubUrl} class="text-blue-500">GitHub</a>
+            )}
+            {demoUrl && (
+                <>
+                    {githubUrl && <span> | </span>}
+                    <a href={demoUrl} class="text-blue-500">Demo</a>
+                </>
+            )}
+        </section>
+
+        <section class="mt-4">
+            <h2 class="text-2xl font-bold">Features</h2>
+            <ul class="list-disc list-inside">
+                {features.map(feature => <li>{feature}</li>)}
+            </ul>
+        </section>
+
+        <section class="mt-4">
+            <h2 class="text-2xl font-bold">Technologies Used</h2>
+            <ul class="list-disc list-inside">
+                {technologies.map(tech => <li>{tech}</li>)}
+            </ul>
+        </section>
+    </article>
+</Layout>

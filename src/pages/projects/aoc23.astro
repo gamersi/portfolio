@@ -1,43 +1,29 @@
 ---
-import Layout from '@layouts/Layout.astro';
+import ProjectLayout from '@layouts/ProjectLayout.astro';
 
 const title = 'Advent of Code 2023';
+const about = `This is a collection of my solutions to the 2023 Advent of Code.
+I'm using Rust for this year's solutions. I'm trying to keep the
+solutions as fast as possible with as little dependencies as
+possible. I'm also trying to keep the solutions as readable as
+possible.`;
+const githubUrl = 'https://github.com/gamersi/adventofcode-solutions-2023';
+const features = [
+    'Fast',
+    '(Kinda) Easy to read',
+    'Tested',
+    'first day to day 21 done'
+];
+const technologies = [
+    'Rust',
+    'regex'
+];
 ---
 
-<Layout title={title}>
-    <article class="p-4">
-        <h1 class="text-3xl font-bold">{title}</h1>
-        <section class="mt-4">
-            <h2 class="text-2xl font-bold">About</h2>
-            <p class="text-lg">
-                This is a collection of my solutions to the 2023 Advent of Code.
-                I'm using Rust for this year's solutions. I'm trying to keep the
-                solutions as fast as possible with as little dependencies as
-                possible. I'm also trying to keep the solutions as readable as
-                possible.
-            </p>
-            <a
-                href="https://github.com/gamersi/adventofcode-solutions-2023"
-                class="text-blue-500">GitHub</a
-            >
-        </section>
-
-        <section class="mt-4">
-            <h2 class="text-2xl font-bold">Features</h2>
-            <ul class="list-disc list-inside">
-                <li>Fast</li>
-                <li>(Kinda) Easy to read</li>
-                <li>Tested</li>
-                <li>first day to day 21 done</li>
-            </ul>
-        </section>
-
-        <section class="mt-4">
-            <h2 class="text-2xl font-bold">Technologies Used</h2>
-            <ul class="list-disc list-inside">
-                <li>Rust</li>
-                <li>regex</li>
-            </ul>
-        </section>
-    </article>
-</Layout>
+<ProjectLayout 
+    {title} 
+    {about} 
+    {githubUrl} 
+    {features} 
+    {technologies} 
+/>

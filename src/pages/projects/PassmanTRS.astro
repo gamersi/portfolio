@@ -1,47 +1,33 @@
 ---
-import Layout from '@layouts/Layout.astro';
+import ProjectLayout from '@layouts/ProjectLayout.astro';
 
 const title = 'PassmanTRS';
+const about = `PassmanTRS is a password manager that is designed to be simple
+and easy to use. It is built with Rust and Svelte.`;
+const githubUrl = 'https://github.com/gamersi/PassmanTRS';
+const features = [
+    'Simple and easy to use',
+    'Secure',
+    'Fast',
+    'Cross-platform',
+    'Basic password Features',
+    'Password Generator',
+    'Free and Open Source'
+];
+const technologies = [
+    'Rust',
+    'Svelte',
+    'Tauri',
+    'PBKDF2',
+    'bcrypt',
+    'AES-256-GCM'
+];
 ---
 
-<Layout title={title}>
-    <article class="p-4">
-        <h1 class="text-3xl font-bold">{title}</h1>
-        <section class="mt-4">
-            <h2 class="text-2xl font-bold">About</h2>
-            <p class="text-lg">
-                PassmanTRS is a password manager that is designed to be simple
-                and easy to use. It is built with Rust and Svelte.
-            </p>
-            <a
-                href="https://github.com/gamersi/PassmanTRS"
-                class="text-blue-500">GitHub</a
-            >
-        </section>
-
-        <section class="mt-4">
-            <h2 class="text-2xl font-bold">Features</h2>
-            <ul class="list-disc list-inside">
-                <li>Simple and easy to use</li>
-                <li>Secure</li>
-                <li>Fast</li>
-                <li>Cross-platform</li>
-                <li>Basic password Features</li>
-                <li>Password Generator</li>
-                <li>Free and Open Source</li>
-            </ul>
-        </section>
-
-        <section class="mt-4">
-            <h2 class="text-2xl font-bold">Technologies Used</h2>
-            <ul class="list-disc list-inside">
-                <li>Rust</li>
-                <li>Svelte</li>
-                <li>Tauri</li>
-                <li>PBKDF2</li>
-                <li>bcrypt</li>
-                <li>AES-256-GCM</li>
-            </ul>
-        </section>
-    </article>
-</Layout>
+<ProjectLayout 
+    {title} 
+    {about} 
+    {githubUrl} 
+    {features} 
+    {technologies} 
+/>
